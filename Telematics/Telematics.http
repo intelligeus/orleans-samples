@@ -1,0 +1,6 @@
+@Telematics_HostAddress = http://localhost:5088
+
+GET {{Telematics_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

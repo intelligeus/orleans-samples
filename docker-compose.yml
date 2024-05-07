@@ -1,0 +1,6 @@
+﻿services:
+  telematics:
+    image: telematics
+    build:
+      context: .
+      dockerfile: Telematics/Dockerfile

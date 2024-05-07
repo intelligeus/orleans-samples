@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSDataDriver", "GPSDataDriver\GPSDataDriver.csproj", "{83612D29-3F56-44D3-B463-417E622E7A87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IngestionService", "IngestionService\IngestionService.csproj", "{63D904CC-34AC-4C2C-B91C-D52ABAD51AD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleTrack", "VehicleTrack\VehicleTrack.csproj", "{F83D838E-5050-429C-9330-F027998D7E40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripService", "TripService\TripService.csproj", "{4255C6F5-1769-484A-993D-E889FF080CAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83612D29-3F56-44D3-B463-417E622E7A87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83612D29-3F56-44D3-B463-417E622E7A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83612D29-3F56-44D3-B463-417E622E7A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83612D29-3F56-44D3-B463-417E622E7A87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D904CC-34AC-4C2C-B91C-D52ABAD51AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D904CC-34AC-4C2C-B91C-D52ABAD51AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D904CC-34AC-4C2C-B91C-D52ABAD51AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D904CC-34AC-4C2C-B91C-D52ABAD51AD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F83D838E-5050-429C-9330-F027998D7E40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83D838E-5050-429C-9330-F027998D7E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83D838E-5050-429C-9330-F027998D7E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83D838E-5050-429C-9330-F027998D7E40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4255C6F5-1769-484A-993D-E889FF080CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4255C6F5-1769-484A-993D-E889FF080CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4255C6F5-1769-484A-993D-E889FF080CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4255C6F5-1769-484A-993D-E889FF080CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

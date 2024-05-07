@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orleans
+  labels:
+    app: orleans
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orleans
+  template:
+    metadata:
+      name: orleans
+      labels:
+        app: orleans
+    spec:
+      containers:
+        - name: orleans
+          image: orleansregistry.azurecr.io/samples/orleans-hosting
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: my-registry-secret
+        
+      restartPolicy: Always
+      

@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Program.cs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Program.cs</font>
+</center></td></tr></table>
+<pre><span class="s0">using </span><span class="s1">var host </span><span class="s2">= </span><span class="s0">new </span><span class="s1">HostBuilder</span><span class="s2">()</span>
+    <span class="s2">.</span><span class="s1">UseOrleans</span><span class="s2">(</span><span class="s1">builder =&gt; builder</span><span class="s2">.</span><span class="s1">UseLocalhostClustering</span><span class="s2">())</span>
+    <span class="s2">.</span><span class="s1">Build</span><span class="s2">();</span>
+
+<span class="s3">// Start the host</span>
+<span class="s1">await host</span><span class="s2">.</span><span class="s1">StartAsync</span><span class="s2">();</span>
+
+<span class="s3">// Orleans handles the lifecycle of our grain so we need a service to access it</span>
+<span class="s1">var grainFactory </span><span class="s2">= </span><span class="s1">host</span><span class="s2">.</span><span class="s1">Services</span><span class="s2">.</span><span class="s1">GetRequiredService</span><span class="s2">&lt;</span><span class="s1">IGrainFactory</span><span class="s2">&gt;();</span>
+
+<span class="s3">// Get a reference to the Periodic grain. This grain does not exist</span>
+<span class="s3">// so Orleans creates an instance for us. We pass in &quot;1&quot; as the primary key.</span>
+<span class="s1">var periodic </span><span class="s2">= </span><span class="s1">grainFactory</span><span class="s2">.</span><span class="s1">GetGrain</span><span class="s2">&lt;</span><span class="s1">IPeriodic</span><span class="s2">&gt;(</span><span class="s4">&quot;1&quot;</span><span class="s2">);</span>
+
+<span class="s3">// // Call the grain to activate it and trigger the timer instantiation</span>
+<span class="s1">await periodic</span><span class="s2">.</span><span class="s1">ActivateMe</span><span class="s2">();</span>
+
+
+
+<span class="s3">// Shut down the host</span>
+<span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s4">&quot;Orleans is running.\nPress Enter to terminate...&quot;</span><span class="s2">);</span>
+<span class="s1">Console</span><span class="s2">.</span><span class="s1">ReadLine</span><span class="s2">();</span>
+<span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s4">&quot;Orleans is stopping...&quot;</span><span class="s2">);</span>
+
+<span class="s1">await host</span><span class="s2">.</span><span class="s1">StopAsync</span><span class="s2">();</span></pre>
+</body>
+</html>
